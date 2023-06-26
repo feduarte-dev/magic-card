@@ -28,5 +28,7 @@ describe('4 - Testes da função saveFavoriteMagicCard', () => {
    expect(nameArr).toContain('Angel of Mercy');
    expect(nameArr).toContain('Aven Cloudchaser');
    expect(nameArr).toContain('Ballista Squad');
+   expect(nameArr)
+   .toEqual(['Ancestor\'s Chosen', 'Angel of Mercy', 'Aven Cloudchaser', 'Ballista Squad']);
   });
 });
