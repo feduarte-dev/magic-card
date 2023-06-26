@@ -1,5 +1,5 @@
 const { getMagicCard } = require('../magic');
-const { fetchCardById } = require('../magic');
+// const { fetchCardById } = require('../magic');
 
 require('../../startest/mockSetup');
 

@@ -23,7 +23,10 @@ describe('3 - Testes da função saveFavoriteMagicCard', () => {
 describe('4 - Testes da função saveFavoriteMagicCard', () => {
   it(`4.1 Implemente um teste que verifique que o array que você obteve com o map
   contém todos os quatro nomes iniciais nomes`, async () => {
-    // implemente seus testes aqui
-
+   const nameArr = favoriteCards.map((card) => card.name);
+   expect(nameArr).toContain('Ancestor\'s Chosen');
+   expect(nameArr).toContain('Angel of Mercy');
+   expect(nameArr).toContain('Aven Cloudchaser');
+   expect(nameArr).toContain('Ballista Squad');
   });
 });
