@@ -1,8 +1,8 @@
-// const { saveFavoriteMagicCard } = require('../magic');
-// const favoriteCards = require('../data/favoriteCards');
+const { saveFavoriteMagicCard } = require('../magic');
+const favoriteCards = require('../data/favoriteCards');
 
 const restoreFavoriteCards = () => {
-  // implemente seu código aqui
+  if (favoriteCards.length !== 4) favoriteCards.pop();
 };
 
 jest.setTimeout(10000);
@@ -11,13 +11,12 @@ describe('3 - Testes da função saveFavoriteMagicCard', () => {
   afterEach(restoreFavoriteCards);
 
   it('3.1 Testa se um novo card é adicionado a cada execução', async () => {
-    // await saveFavoriteMagicCard('130553');
-    // implemente seus testes aqui
-
+    await saveFavoriteMagicCard('130553');
+   expect(favoriteCards).toHaveLength(5);
   });
 
   it('3.2 Deve retornar favoriteCards contendo apenas os cards favoritos iniciais', () => {
-    // expect(favoriteCards).toHaveLength(4);
+    expect(favoriteCards).toHaveLength(4);
   });
 });
 
